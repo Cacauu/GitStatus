@@ -4,8 +4,8 @@ if (isset($_GET['username']) && isset($_GET['repo'])) {
 	$repo = $_GET['repo'];
 }
 else {
-	$username = 'reevio';
-	$repo = 'reevio'; //TODO: Replace with github_statusboard repo
+	$username = 'cacauu';
+	$repo = 'gitstatus';
 }
 
 if (isset($_GET['limit'])) {
