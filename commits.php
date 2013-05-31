@@ -9,10 +9,10 @@ else {
 }
 
 if (isset($_GET['limit'])) {
-	$url = 'https://api.github.com/repos/reevio/reevio/commits?page=1&per_page='.$_GET['limit'];
+	$url = 'https://api.github.com/repos/'.$username'/'.$repo.'/commits?page=1&per_page='.$_GET['limit'];
 }
 else {
-	$url = 'https://api.github.com/repos/reevio/reevio/commits';
+	$url = 'https://api.github.com/repos/'.$username'/'.$repo.'/commits';
 }
 
 $ch = curl_init();
