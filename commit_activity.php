@@ -29,7 +29,11 @@ if (!$commit_activities == "") {
 	echo '"datapoints" : [';	
 	foreach ($commit_activities as $commit_activity) { 
 		$week_total = $commit_activity['days']['1'] + $commit_activity['days']['2'] +  $commit_activity['days']['3'] + $commit_activity['days']['4'] + $commit_activity['days']['5'] + $commit_activity['days']['6'] + $commit_activity['days']['0'];
-		echo '{ "title" : "'.date('W/Y', $commit_activity['week']).'", "value" : '.$week_total.'},';
+		if ($commit_activity['week'] > time()) {
+		}
+		else {
+			echo '{ "title" : "'.date('W/Y', $commit_activity['week']).'", "value" : '.$week_total.'},';
+		}
 	}
 	echo ']';
 	echo '},';
